@@ -52,7 +52,6 @@ public:
 int main()
 {
     circle v;
-
     v.setdata();
     v.sdata();
     v.gdata();
