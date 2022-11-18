@@ -13,12 +13,27 @@ void dis()
 	}
 	printf("\n");
 }
-void insertEnd(int val)
+int insertEnd(int val)
 {
-	if (top >= n - 1)
-		printf("Array is Full....");
-	else
-		a[++top] = val;
+    if (top >= n - 1)
+        printf("\nArray is Full...");
+    else
+        a[++top] = val;
+}
+int insertFirst(int val)
+{
+    if (top >= n - 1)
+        printf("\nArray is Full...");
+    else
+	{
+        for (int i = n; i >= 0; i--)
+        {
+            a[i] = a[i - 1];
+        }
+        a[0] = val;
+        ++top;
+        
+    }
 }
 void insertmid(int val)
 {
@@ -38,8 +53,8 @@ int main()
 {
 	int ch,a;
 	printf("1. Insert at End");
-	printf("\n2. Insert at mid");
-	printf("\n3. Insert at first");
+	printf("\n2. Insert at First");
+	printf("\n3. Insert at Mid");
 	printf("\n4. Delete at End");
 	printf("\n5. Delete at mid");
 	printf("\n6. Delete at first");
@@ -57,6 +72,11 @@ int main()
 			insertEnd(a);
 			break;
 		case 2:
+			printf("Enter element: ");
+			scanf("%d",&a);
+			insertFirst(a);
+			break;
+		case 3:
 			printf("Enter element: ");
 			scanf("%d",&a);
 			insertmid(a);
