@@ -14,21 +14,23 @@ void dis()
 	printf("\n");
 }
 
-
-
 int insertFirst(int val)
 {
-    if (top >= n - 1)
-        printf("\nArray is Full...");
-    else
+	if (top >= n - 1)
+		printf("\nArray is Full...");
+	else if (top == -1)
 	{
-        for (int i = n; i >= 0; i--)
-        {
-            a[i] = a[i - 1];
-        }
-        a[0] = val;
-        ++top;
-    }
+		a[++top] = val;
+	}
+	else
+	{
+		for (int i = n - 1; i >= 0; i--)
+		{
+			a[i] = a[i - 1];
+		}
+		a[0] = val;
+		++top;
+	}
 }
 
 void insertmid(int val)
@@ -36,7 +38,7 @@ void insertmid(int val)
     if (top >= n - 1)
         printf("\nArray is Full...");
     else
-        a[++top] = val;
+        
     {
         for (int i = n; i >= (n / 2); i--)
         {
@@ -49,44 +51,48 @@ void insertmid(int val)
 
 int insertEnd(int val)
 {
-    if (top >= n - 1)
-        printf("\nArray is Full...");
-    else
-        a[++top] = val;
+	if (top >= n - 1)
+		printf("\nArray is Full...");
+	else
+		a[++top] = val;
 }
 
 int firstdelete()
 {
-    if (top < 0)
-        printf("\nArray is Empty...");
-    else
-        --top;
-        for(int i = 0;i<n;i++)
-        {
-            a[i] = a[i+1];
-        }
+	if (top < 0)
+		printf("\nArray is Empty...");
+	else
+	{
+		for (int i = 0; i < n; i++)
+		{
+			a[i] = a[i + 1];
+		}
+		--top;
+	}
 }
 int deletEnd()
 {
-    if (top < 0)
-        printf("\nArray is Empty...");
-    else
-        a[--top];
+	if (top < 0)
+		printf("\nArray is Empty...");
+	else
+		a[--top];
 }
 int deletemid()
 {
-    if (top <= 0)
-        printf("\nArray is Empty...");
-    else
-
-        for (int i = 0; i >= n / 2; i--)
-        {
-            a[n / 2] = a[n - 1];
-        }
+	if (top <= 0)
+		printf("\nArray is Empty...");
+	else
+	{
+		for (int i = n / 2; i < n / 2; i++)
+		{
+			a[i] = a[i + 1];
+		}
+		--top;
+	}
 }
 int main()
 {
-	int ch,a;
+	int ch, a;
 	printf("1. Insert at FIRST");
 	printf("\n2. Insert at MIDDEL");
 	printf("\n3. Insert at END");
@@ -98,35 +104,35 @@ int main()
 	do
 	{
 		printf("\nEnter choice: ");
-		scanf("%d",&ch);
+		scanf("%d", &ch);
 		switch (ch)
 		{
 		case 1:
 			printf("Enter element: ");
-			scanf("%d",&a);
+			scanf("%d", &a);
 			insertFirst(a);
 			break;
 		case 2:
 			printf("Enter element: ");
-			scanf("%d",&a);
+			scanf("%d", &a);
 			insertmid(a);
 			break;
 		case 3:
 			printf("Enter element: ");
-			scanf("%d",&a);
+			scanf("%d", &a);
 			insertEnd(a);
 			break;
 		case 4:
-		 	firstdelete();
-		break;
+			firstdelete();
+			break;
 
 		case 5:
 			deletemid();
-		break;
+			break;
 
 		case 6:
 			deletEnd();
-		break;
+			break;
 
 		case 7:
 			dis();
@@ -137,6 +143,5 @@ int main()
 			printf("Wrong Number Selected");
 			break;
 		}
-	} while (ch!=0);
-	
+	} while (ch != 0);
 }
