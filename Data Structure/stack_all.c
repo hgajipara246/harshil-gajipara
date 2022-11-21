@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
-#define n 15
+#define n 5
 int a[n];
 int i;
 int top = -1;
@@ -13,31 +13,31 @@ void print()
     }
     for (int i = 0; i <= top; i++)
     {
-        printf("%d", a[i]);
+        printf("%d ", a[i]);
     }
     printf("\n");
 }
-void insret(int val)
+void insert(int val)
 {
     if (top >= n - 1)
         printf("\n overflow");
     else
         a[++top] = val;
 }
-// void delete ()
-// {
-//     if (top < 0)
-//         printf("\n underflow");
-//     else
-//     {
-//         printf("\n delete is %d ", a[top]);
-//         --top;
-//     }
-// }
+void deleteend()
+{
+    if (top < 0)
+        printf("\n underflow");
+    else
+    {
+        printf("\n delete is %d ", a[top]);
+        --top;
+    }
+}
 void firstinsert(int val)
 {
     if (top >= n - 1)
-        printf(" overloading....");
+        printf("\n overloading");
     else if (top == -1)
         a[++top] = val;
     else
@@ -70,7 +70,7 @@ void midinsert(int val)
         printf("overlow......");
     else
     {
-        for (int i = n; i >= n / 2; i--)
+        for (int i = n; i >= (n / 2); i--)
         {
             a[i] = a[i - 1];
         }
@@ -96,17 +96,16 @@ void middelete()
 int main()
 {
     int ch, x, y, z;
+    printf("\n 1.insert");
+    printf("\n 2.delete");
+    printf("\n 3.first insert");
+    printf("\n 4.first delete");
+    printf("\n 5.mid insert");
+    printf("\n 6.mid delete");
+    printf("\n 7.print");
+    printf("\n 0.exit");
     do
     {
-        printf("\n 1.insert");
-        printf("\n 2.delete");
-        printf("\n 3.first insert");
-        printf("\n 4.first delete");
-        printf("\n 5.mid insert");
-        printf("\n 6.end delete");
-        printf("\n 7.print");
-        printf("\n 0.exit");
-
         printf("\n enter your choice: ");
         scanf("%d", &ch);
 
@@ -119,7 +118,7 @@ int main()
             break;
 
         case 2:
-            delete ();
+            deleteend();
             break;
 
         case 3:
@@ -139,19 +138,20 @@ int main()
             break;
 
         case 6:
-            firstdelete();
+            middelete();
             break;
 
         case 7:
-            middelete();
+            print();
             break;
 
         case 0:
             break;
 
-            default:
+        default:
             printf("wrong choice.....");
             break;
         }
     } while (ch != 0);
 }
+    

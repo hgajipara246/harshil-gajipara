@@ -1,0 +1,25 @@
+infix to prefix
+(A +(B - C) * (D / E) + F)
+
+SYMBOL		OPR.	EXPRE.
+)		)
+F		)	F
++		)+	F
+)		)+)	F
+E		)+)	FE
+/		)+)/	FE
+D		)+)/	FED
+(		)+	FED/
+*		)+*	FED/
+)		)+*)	FED/
+C		)+*)	FED/C
+-		)+*)-	FED/C
+B		)+*)-	FED/CB
+(		)+*	FED/CB-
++		)++	FED/CB-*
+A		)++	FED/CB-*A
+(			FED/CB-*A++
+
+
+FINAL EXPRESSION
+:- ++A*-BC/DEF

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define n 10
+#define n 5
 int a[n];
 int top = -1;
 void dis()
