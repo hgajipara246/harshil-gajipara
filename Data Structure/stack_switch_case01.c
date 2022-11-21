@@ -35,18 +35,18 @@ int insertFirst(int val)
 
 void insertmid(int val)
 {
-    if (top >= n - 1)
-        printf("\nArray is Full...");
-    else
-        
-    {
-        for (int i = n; i >= (n / 2); i--)
-        {
-            a[i] = a[i - 1];
-        }
-        a[n / 2] = val;
-        ++top;
-    }
+	if (top >= n - 1)
+		printf("\nArray is Full...");
+	else
+
+	{
+		for (int i = n; i >= (n / 2); i--)
+		{
+			a[i] = a[i - 1];
+		}
+		a[n / 2] = val;
+		++top;
+	}
 }
 
 int insertEnd(int val)
@@ -105,7 +105,7 @@ int main()
 	{
 		printf("\nEnter choice: ");
 		scanf("%d", &ch);
-		switch (ch)
+		switch (ch) 
 		{
 		case 1:
 			printf("Enter element: ");

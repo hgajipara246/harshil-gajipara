@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #define n 10
 int a[n];
 int top = -1;
@@ -15,7 +15,6 @@ int insertFirst(int val)
         }
         a[0] = val;
         ++top;
-        
     }
 }
 int deletfirst()
@@ -24,16 +23,16 @@ int deletfirst()
         printf("\nArray is Empty...");
     else
         --top;
-        for(int i = 0;i<n;i++)
-        {
-            a[i] = a[i+1];
-        }
+    for (int i = 0; i < n; i++)
+    {
+        a[i] = a[i + 1];
+    }
 }
 int display()
 {
-    for (int i=0;i<=top;i++)
-        printf(" %d",a[i]);
-        printf("\n");
+    for (int i = 0; i <= top; i++)
+        printf(" %d", a[i]);
+    printf("\n");
 }
 int main()
 {

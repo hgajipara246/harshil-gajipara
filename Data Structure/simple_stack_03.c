@@ -53,7 +53,7 @@ int main()
     // deletemid();
     // deletemid();
     // deletemid();
-    //display();
+    // display();
 } /*
  liniar search
  binory search
