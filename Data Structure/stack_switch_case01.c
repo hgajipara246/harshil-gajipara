@@ -23,7 +23,7 @@ int insertFirst(int val)
 		a[++top] = val;
 	}
 	else
-	{
+	{                                                                               
 		for (int i = n - 1; i >= 0; i--)
 		{
 			a[i] = a[i - 1];

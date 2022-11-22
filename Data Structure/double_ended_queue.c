@@ -39,7 +39,7 @@ int rear_insert(int val)
         f=r=0;
         a[r]=val;
     }
-    else
+    else                       
     {
         r=(r+1)%n;
         a[r]=val;
