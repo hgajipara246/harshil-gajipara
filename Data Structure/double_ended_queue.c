@@ -4,14 +4,12 @@ int r=-1,f=-1,a[n],i;
 
 int front_insert(int val)
 {
-    if(f<0)
-        printf("Under Flow");
-    else if(f==0)
+   if(f==0)
         printf("\n Do Not Insert Element");
     else if(f==-1)
     {
         f=r=0;
-        a[++f]=val;
+        a[f]=val;
     }
     else
     {
@@ -26,12 +24,11 @@ int front_delete()
     else if(f==r)
         f=r=-1;
     else
-        f=(f+1)%n;
+        ++f;
 }
 
 int rear_insert(int val)
 {
-
     if((r+1)%n==f)
         printf("\n Array is Full:");
     else if(f==-1)
@@ -45,7 +42,6 @@ int rear_insert(int val)
         a[r]=val;
     }
 }
-
 
 int rear_delete()
 {
