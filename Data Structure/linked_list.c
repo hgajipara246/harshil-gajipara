@@ -1,15 +1,12 @@
 //  Self refrefial Node ...... Linked list
-
 #include <stdio.h>
 #include <stdlib.h>
-
 struct node
 {
     int n;
     char p;
     struct node *ptr;
 };
-
 int main()
 {
     struct node a,b,c,d,e,f;
@@ -32,7 +29,7 @@ int main()
     f.p = 'F';
     f.ptr = NULL;
     
-    printf("Var1 : %d\t%c\t",a.n,a.p);
+    printf("Var1 : %d\t%c\t",a.n,a.p); 
     printf("\nVar2 : %d\t%c",b.n,b.p);
     printf("\nVar3 : %d\t%c",c.n,c.p);
     printf("\nVar3 : %d\t%c",d.n,d.p);
