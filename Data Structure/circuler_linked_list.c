@@ -45,22 +45,23 @@ void insertfirst(int val)
         while (ptr->next != head)
             ptr = ptr->next;
         ptr->next = temp;
-        temp->next= head;
+        temp->next = head;
         head = temp;
     }
 }
-void insertmid(int val,int pos)
+void insertmid(int val, int pos)
 {
-    struct node *ptr=head,*prev;
-    struct node *temp=(struct node *)malloc(sizeof(struct node));
-    temp->data=val;
-    while(ptr->data!=pos)
+    struct node *ptr = head, *prev;
+    struct node *temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = val;
+    
+    while (ptr->data != pos)
     {
-        prev=ptr;
-        ptr=ptr->next;
+        prev = ptr;
+        ptr = ptr->next;
     }
-    prev->next=temp;
-    temp->next=ptr;
+    prev->next = temp;
+    temp->next = ptr;
 }
 
 void insertend(int val)
@@ -91,7 +92,7 @@ void deletfirst()
 
     if (head == NULL)
         printf("Already Empty..");
-    else if(ptr->next == head)
+    else if (ptr->next == head)
     {
         head = NULL;
         free(head);
@@ -99,7 +100,7 @@ void deletfirst()
     else
     {
         while (ptr->next != head)
-        ptr =ptr->next;
+            ptr = ptr->next;
         ptr->next = temp->next;
         head = temp->next;
         free(temp);
@@ -107,13 +108,13 @@ void deletfirst()
 }
 void deletmid(int pos)
 {
-    struct node *ptr=head,*prev;
-    while(ptr->data!=pos)
+    struct node *ptr = head, *prev;
+    while (ptr->data != pos)
     {
-        prev=ptr;
-        ptr=ptr->next;
+        prev = ptr;
+        ptr = ptr->next;
     }
-    prev->next=ptr->next;
+    prev->next = ptr->next;
     free(ptr);
 }
 
@@ -148,14 +149,12 @@ int main()
     insertend(30);
     insertend(40);
     insertend(50);
-    // insertfirst(5);
-    // insertfirst(15);
+    insertfirst(5);
+    insertfirst(15);
     print();
     deletfirst();
     print();
-    // insertmid(12,30);
-    // deletmid(30);
-    // print();
-    
-    
+    insertmid(12, 30);
+    deletmid(30);
+    print();
 }
