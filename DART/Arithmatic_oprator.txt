@@ -1,0 +1,30 @@
+void main() 
+{
+  int numOne = 60;
+  int numTwo = 20;
+  
+  // Arithmatic oprator
+  
+  // Addiotion
+  print("60 + 20 = ${numOne + numTwo}");
+  
+  // Subtraction
+  print("60 - 20 = ${numOne - numTwo}");
+  
+  // Multiplication
+  print("60 * 20 = ${numOne * numTwo}");
+  
+  // Division
+  print("60 / 20 = ${numOne / numTwo}");
+  
+  // Modulus
+  print("60 % 20 = ${numOne % numTwo}");
+}
+
+OUTPUT:
+
+60 + 20 = 80
+60 - 20 = 40
+60 * 20 = 1200
+60 / 20 = 3
+60 % 20 = 0

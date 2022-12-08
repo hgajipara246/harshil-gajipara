@@ -1,0 +1,26 @@
+void main() 
+{
+  dynamic name = 'Harshil Gajipara';
+  print(name);
+
+  name = 142.50;
+  print (name);
+  
+  name = 10;
+  print (name);
+  
+  name = false;
+  print (name);
+  
+  var data = true;
+  print(data);
+}
+ 
+
+OUTPUT:
+
+Harshil Gajipara
+142.5
+10
+false
+true

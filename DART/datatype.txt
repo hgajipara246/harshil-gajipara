@@ -1,0 +1,26 @@
+void main() 
+{
+  int number = 1;
+  String name = 'Harshil';
+  String surname = 'Gajipra';
+  double percentage = 70.65;
+  String male = 'Male '; 
+  String female = 'female'; 
+  bool val = (female==female);
+  
+  print('Hello sir... ');
+  print("Number $number");
+  print('Name : $name');
+  print('Surname : $surname');
+  print("Percentage $percentage");
+  print (val);
+}
+
+OUTPUT:
+
+Hello sir... 
+Number 1
+Name : Harshil
+Surname : Gajipra
+Percentage 70.65
+true

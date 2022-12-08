@@ -1,0 +1,16 @@
+void main(){
+  
+  // Assignment oprator
+  
+  int dataOne = 50;
+  int dataTwo = 30;
+  int dataThree;
+
+  dataThree = dataOne - dataTwo;
+  print(dataThree);
+
+}
+
+OUTPUT:
+
+20

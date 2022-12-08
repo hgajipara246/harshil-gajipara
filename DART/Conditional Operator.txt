@@ -1,0 +1,16 @@
+void main(){
+  
+  // Conditional Operator
+  
+  int dataOne = 50;
+  int dataTwo = 60;
+  dynamic dataThree;
+  
+  dataThree = ((dataOne<80) ? "Condition True" : "Condition False");
+  print("Conditional Statement $dataThree");
+  
+}
+
+OUTPUT:
+
+Conditional Statement Condition True

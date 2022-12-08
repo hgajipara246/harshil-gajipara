@@ -1,0 +1,22 @@
+void main(){
+  
+  // Logical oprator
+  
+  int dataOne = 50;
+  int dataTwo = 30;
+  dynamic dataThree;
+  
+  // && (AND) operator 
+ dataThree = dataOne < 80 && dataTwo > 80;
+ print("Condition is = $dataThree");
+  
+  // || (OR) operator
+  dataThree = dataOne < 80 || dataTwo > 80;
+  print ("Condition is = $dataThree");
+  
+}
+
+OUTPUT:
+
+Condition is = false
+Condition is = true
